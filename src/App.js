@@ -19,7 +19,7 @@ function App() {
         </a>
       </header>
     </div>
-      //mana roxxx
+      //kethaka fonseka
   );
 }
 
