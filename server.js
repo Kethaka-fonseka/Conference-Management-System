@@ -1,7 +1,7 @@
 /**
  * TO START SERVER
  * npm run nodemon
- */
+ *CHECKED/
 /** Dependancies
  * npm i bcryptjs 
  * npm i jsonwebtoken
