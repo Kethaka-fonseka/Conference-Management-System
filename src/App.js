@@ -1,6 +1,7 @@
-
 import logo from './logo.svg';
 import './App.css';
+
+// React Main page
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         </a>
       </header>
     </div>
-     // Sandaruwan Jayasundara
+  
   );
 }
 
