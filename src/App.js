@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 
-// React Main page
-
 function App() {
   return (
     <div className="App">
@@ -15,12 +13,13 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Learn React
         </a>
       </header>
     </div>
-  
+      //kethaka fonseka
   );
 }
 
