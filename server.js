@@ -34,8 +34,8 @@ app.use(cors(
 
 app.use(bodyParser.json());
 
-const auth=require('./routes/auth');
-app.use("/auth",auth);
+const API=require('./API/api');
+app.use("/api",API);
 
 
 app.listen(PORT,() =>{
