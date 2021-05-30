@@ -34,8 +34,6 @@ app.use(cors(
 
 app.use(bodyParser.json());
 
-
-
 const auth=require('./routes/auth');
 app.use("/auth",auth);
 

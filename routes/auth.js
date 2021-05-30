@@ -9,8 +9,9 @@ router.post('/',async (req,res)=>{
     try{
 
         console.log('Working Register form');
-    const{email, userType,password, passwordVerify} = req.body;
+    const{email,password, passwordVerify} = req.body;
 
+        const userType="User"
         //Validations
         if(!email || !userType ||!password || !passwordVerify)
             return res
