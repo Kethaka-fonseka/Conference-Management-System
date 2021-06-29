@@ -10,7 +10,7 @@ function Home() {
     return (
         <div>
 
-            <h1 className={"sub-titles text-center pt-5"} >ABOUT</h1>
+            <h1 className={"sub-titles text-center "} >ABOUT</h1>
             <hr className="divider"/>
             <br/>
             <Desc/>

@@ -7,6 +7,7 @@ import About from "../components/Guest Pages/About";
 import Contact from "../components/Guest Pages/Contact";
 import Login from "../components/Guest Pages/Authentications/Login";
 import Signup from "../components/Guest Pages/Authentications/Signup";
+import Keynotes from "../components/Guest Pages/KeyNotes/keynotes";
 
 function MainRoutes() {
     return (
@@ -16,6 +17,7 @@ function MainRoutes() {
             <br/>
             <Switch>
                 <Route path="/" exact component={Home}/>
+                <Route path="/keynotes" component={Keynotes}/>
                 <Route path="/about" component={About}/>
                 <Route path="/contact" component={Contact}/>
                 <Route path="/login" component={Login}/>
