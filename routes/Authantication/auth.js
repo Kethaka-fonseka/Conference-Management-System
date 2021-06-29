@@ -1,6 +1,6 @@
 const  express=require("express");
 var router = express.Router();
-const User=require("../models/userModel");
+const User=require("../../models/userModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
@@ -8,14 +8,12 @@ const jwt = require("jsonwebtoken");
 router.post('/',async (req,res)=>{
     try{
 
-
-        
-        console.log('Working Register form');
-    const{email,password, passwordVerify} = req.body;
+   
+    const{Email,password, passwordVerify} = req.body;
 
         const userType="User"
         //Validations
-        if(!email || !userType ||!password || !passwordVerify)
+        if(!Email || !userType ||!password || !passwordVerify)
             return res
             .status(400)
             .json({errorMessage: "Please enter all required fields"});
@@ -31,7 +29,7 @@ router.post('/',async (req,res)=>{
             .status(400)
             .json({errorMessage: "Please enter the same password twice"});
 
-        const existingUser =await User.findOne({email});
+        const existingUser =await User.findOne({Email});
        
         if(existingUser)
             return res
@@ -45,7 +43,7 @@ router.post('/',async (req,res)=>{
         //Save user accounts to the DB
 
         const newUser = new User({
-            email,userType, passwordHash
+            Email,userType, passwordHash
         });
 
         const saveUser = await newUser.save();
@@ -56,7 +54,7 @@ router.post('/',async (req,res)=>{
         }, process.env.JWT_SECRET);
 
        //send the token in a HTTP-only cookie
-
+        
         res.cookie("token",token,{
             httpOnly:true
         }).send();
@@ -67,31 +65,35 @@ router.post('/',async (req,res)=>{
     }
 });
 
-//Login
-router.post('/login',async (req,res)=>{
 
-        console.log("Login working");
+    router.post('/login',async (req,res)=>{
+
+    
     try{
-        const{email, password} = req.body;
+        const { Email, password } = req.body;
 
         //Validate
-        if(!email || !password)
-        return res
-        .status(400)
-        .json({errorMessage: "Please enter all required fields"});
-
-        const existingUser = await User.findOne({email});
-        if(!existingUser)
+        if (!Email || !password) {
+            console.log(Email, password,"1 eka");
             return res
-            .status(401)
-            .json({errorMessage: "Worng email or password"});
+                .status(400)
+                .json({ errorMessage: "Please enter all required fields" });
+        }
 
+        const existingUser = await User.findOne({Email});
+        if (!existingUser) {
+            console.log(Email, password,"2 eka");
+            return res
+                .status(401)
+                .json({ errorMessage: "Worng email or password" });
+        }
         const passwordCorrect = await bcrypt.compare(password, existingUser.passwordHash);
-        if(!passwordCorrect)
+        if (!passwordCorrect) {
+            console.log(Email, password,"3 eka");
             return res
-            .status(401)
-            .json({errorMessage: "Worng email or password"});
-
+                .status(401)
+                .json({ errorMessage: "Worng email or password" });
+        }
 
          //sign the token
          const token=jwt.sign({
@@ -103,15 +105,41 @@ router.post('/login',async (req,res)=>{
         res.cookie("token",token,{
             httpOnly:true
         }).send({
-            status:"Login success", 
-            user:existingUser.userType
+            users: existingUser
         });
-     
-    }catch(err){
-        console.log(err);
-        res.status(500).send();
+
+
+
+
+
+
+    } catch (err) {
+        
+        console.log("Error EKata");
+    
     }
+
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 router.get('/logout',async (req,res)=>{

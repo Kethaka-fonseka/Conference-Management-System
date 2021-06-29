@@ -3,30 +3,34 @@ const schema=mongoose.schema;
 
 const UserManagementSchema = new mongoose.Schema({
 
-email:{
+FirstName:{
     type:String,
     required: true
 },
-Position:{
+LastName:{
     type:String,
     required: true
 },
 
-Name:{
+Email:{
     type:String,
     required: true
 },
-Gender:{
+Contact:{
+    type:Number,
+    required: true
+},
+Role:{
     type:String,
     required: true
 },
 passwordHash:{
     type:String,
     required: true
-},
-photo:{
+    },
+Identity:{
     type:String,
-    required: true
+     required: true
 }
 
 });
