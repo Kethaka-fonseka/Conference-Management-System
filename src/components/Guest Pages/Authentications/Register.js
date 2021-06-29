@@ -3,38 +3,27 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import "../../../stylesheets/Login.css";
 
-
-export default function Login() {
+export default function Register() {
   const [Email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordVerify, setPasswordVerify] = useState("");
+
   const history = useHistory();
 
-  function Logins() {
+  function Registers() {
     const data = {
       Email,
       password,
+      passwordVerify,
     };
 
     axios
-      .post("http://localhost:8070/api/auth/login", data)
+      .post("http://localhost:8070/api/auth", data)
       .then((response) => {
-        if (response.data.users.userType == "Admin") {
-          history.push("/management");
-
-        } else if (response.data.users.userType == "User") {
-          history.push("/");
-        } else {
-          history.push("/login");
-        }
-        
-
-        
-        
-       })
+        history.push("/");
+      })
       .catch((err) => {
-        // swal("Try again", "Incorrect email or password");
-
-        console.log(err);
+        alert(err);
       });
   }
 
@@ -42,15 +31,14 @@ export default function Login() {
     <div class='body'>
       <div class='main'>
         <p class='sign' align='center'>
-          Sign in
+          Register
         </p>
-
         <input
           required
           class='un '
-          type='text'
           name='Email'
           id='Email'
+          type='text'
           align='center'
           placeholder='Username'
           onChange={(e) => {
@@ -67,14 +55,20 @@ export default function Login() {
             setPassword(e.target.value);
           }}
         />
-        <button Login class='submit' onClick={Logins} align='center'>
-          Sign in
+
+        <input
+          required
+          class='pass'
+          type='password'
+          align='center'
+          placeholder='Password'
+          onChange={(e) => {
+            setPasswordVerify(e.target.value);
+          }}
+        />
+        <button class='submit' onClick={Registers} align='center'>
+          Register
         </button>
-        <p class='forgot' align='center'>
-          <a class='forget' href='/Register'>
-            Register
-          </a>
-        </p>
       </div>
     </div>
   );
