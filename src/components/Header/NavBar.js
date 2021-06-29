@@ -35,7 +35,7 @@ function NavBar() {
 
             </Nav>
             <Button className="mr-sm-2" href="/login" variant="outline-light">Log in</Button>{' '}
-            <Button className="mr-sm-2"variant="outline-light">Sign up</Button>{' '}
+            <Button className="mr-sm-2"  href="/signup" variant="outline-light">Sign up</Button>{' '}
             {/*<Button className="mr-sm-2"variant="outline-light">Log out</Button>{' '}*/}
             </Navbar.Collapse>
         </Navbar>
