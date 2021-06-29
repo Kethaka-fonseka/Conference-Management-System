@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Button, Form, FormControl, Nav, Navbar} from "react-bootstrap";
 import '../../stylesheets/Navbar.css';
-import logo from '../../assets/ICAF.svg';
+// import logo from '../../assets/ICAF.svg';
 function NavBar() {
 
     return (

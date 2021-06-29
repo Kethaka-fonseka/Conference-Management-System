@@ -5,12 +5,12 @@ import Speakers from "./SubHome/Speakers";
 import Desc from "./SubHome/Desc";
 import Upcoming from "./SubHome/Upcoming";
 import '../../../stylesheets/titles.css';
+import Timer from "../../Header/Timer";
 
 function Home() {
     return (
-        <div>
-
-            <h1 className={"sub-titles text-center "} >ABOUT</h1>
+        <div >
+            <h1 className={"sub-titles text-center"} >ABOUT</h1>
             <hr className="divider"/>
             <br/>
             <Desc/>

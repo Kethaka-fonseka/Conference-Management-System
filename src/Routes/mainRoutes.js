@@ -8,6 +8,7 @@ import Contact from "../components/Guest Pages/Contact";
 import Login from "../components/Guest Pages/Authentications/Login";
 import Signup from "../components/Guest Pages/Authentications/Signup";
 import Keynotes from "../components/Guest Pages/KeyNotes/keynotes";
+import Timer from "../components/Header/Timer";
 
 function MainRoutes() {
     return (
