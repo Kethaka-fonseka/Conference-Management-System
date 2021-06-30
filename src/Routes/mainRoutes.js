@@ -10,7 +10,7 @@ import Signup from "../components/Guest Pages/Authentications/Login";
 import Keynotes from "../components/Guest Pages/KeyNotes/keynotes";
 import AdminNav from "../components/admin/AdminNav";
 import RequestManagement from "../components/admin/Request Managment/RequestManagement";
-import TemplateManagement from "../components/admin/Template Managment/TemplateManagement";
+import AddTemplates from "../components/admin/Template Managment/AddTemplates";
 import ConferenceManagement from "../components/admin/Conference Management/Upcoming/ConferenceManagement";
 import AllNav from "../components/admin/AllNav";
 import SupportManagment from "../components/admin/Support Management/SupportManagment";
@@ -26,6 +26,7 @@ import DeleteUsers from "../components/admin/User Management/User/DeleteUsers";
 import ContactUsers from "../components/admin/User Management/User/Contact";
 import MainConManagement from "../components/admin/Conference Management/Main/MainConManagement";
 import AddUpConference from "../components/admin/Conference Management/Upcoming/AddUpConference";
+import ViewTemplates from "../components/admin/Template Managment/ViewTemplates";
 
 function MainRoutes() {
   return (
@@ -40,10 +41,8 @@ function MainRoutes() {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         {/*Ushan start*/}
-        <Route
-          path="/admin/templatemanagement"
-          component={TemplateManagement}
-        />
+        <Route path="/admin/add-template" component={AddTemplates} />
+        <Route path="/admin/view-template" component={ViewTemplates} />
         {/*ushan end*/}
 
         <Route path="/admin/requestmanagement" component={RequestManagement} />

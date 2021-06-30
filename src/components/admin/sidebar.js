@@ -45,9 +45,22 @@ export const SidebarData = [
 
   {
     title: "Template",
-    path: "/admin/templatemanagement",
     icon: <AiIcons.AiFillCodeSandboxSquare />,
     cName: "nav-text",
+    subNav: [
+      {
+        title: "Add Templates",
+        path: "/admin/add-template",
+        icon: <IoIcons.IoIosPaper />,
+        cName: "nav-text",
+      },
+      {
+        title: "View Templates",
+        path: "/admin/view-template",
+        icon: <IoIcons.IoIosPaper />,
+        cName: "nav-text",
+      },
+    ],
   },
 
   {
