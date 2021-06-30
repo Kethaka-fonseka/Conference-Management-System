@@ -13,7 +13,7 @@ const userModel = require("../../../models/userModel");
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
         //save location
-        cb(null, '../Frontend/data/UserManagement');
+        cb(null, '../Frontend/assets/UserManagement');
     },
     filename: function(req, file, cb) {   
         cb(null, uuidv4() + '-' + Date.now() + path.extname(file.originalname));

@@ -23,5 +23,8 @@ const ContactUsers = require("../routes/UserManagement/User/Contact");
 router.use("/contactusers", ContactUsers);
 
 
+const Payment = require("../routes/Payment/Payment");
+router.use("/bill", Payment);
+
 
 module.exports = router;
