@@ -24,6 +24,7 @@ import ContactStaffMembers from "../components/admin/User Management/Staff/Conta
 import UserManagement from "../components/admin/User Management/User/Management";
 import DeleteUsers from "../components/admin/User Management/User/DeleteUsers";
 import ContactUsers from "../components/admin/User Management/User/Contact";
+import UserMRoutes from "./ChildRoutes/UserMRoutes";
 
 
 
@@ -40,24 +41,20 @@ function MainRoutes() {
                 <Route path="/contact" component={Contact}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/signup" component={Signup}/>
-                <Route path='/admin/template-management' component={TemplateManagement} />
-                <Route path='/admin/request-management' component={RequestManagement} />
-                <Route path='/admin/conference-management' component={ConferenceManagement} />
-                <Route path='/admin/support-management' component={SupportManagment} />
+                <Route path='/admin/templatemanagement' component={TemplateManagement} />
+                <Route path='/admin/requestmanagement' component={RequestManagement} />
+                <Route path='/admin/conferencemanagement' component={ConferenceManagement} />
+                <Route path='/admin/supportmanagement' component={SupportManagment} />
 
-
-
-                <Route path='/admin/staff-management' component={StaffManagement} />
+                <Route path='/admin/staffmanagement' component={StaffManagement} />
                 <Route path='/admin/staffmanagement/addmembers' component={AddStaffMembers} />
-                <Route path='/admin/staff-management/editmembers/:id' component={EditStaffMembers} />
-                <Route path='/admin/staff-management/deletemembers/:id' component={DeleteStaffMembers} />
+                <Route path='/admin/staffmanagement/editmembers/:id' component={EditStaffMembers} />
+                <Route path='/admin/staffmanagement/deletemembers/:id' component={DeleteStaffMembers} />
                 <Route path='/admin/staff-management/contactstaff/:id' component={ContactStaffMembers} />
 
-                <Route path='/admin/user-management' component={UserManagement} />
-                <Route path='/admin/user-management/deletemembers/:id' component={DeleteUsers} />
-                <Route path='/admin/user-management/editmembers/:id' component={ContactUsers} />
-
-
+                <Route path='/admin/usermanagement' component={UserManagement} />
+                <Route path='/admin/usermanagement/deletemembers/:id' component={DeleteUsers} />
+                <Route path='/admin/usermanagement/editmembers/:id' component={ContactUsers} />
             </Switch>
         </Router>
 

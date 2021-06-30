@@ -68,14 +68,14 @@ export default class Management extends Component {
                       <Link
                         style={{ marginTop: "30px", marginRight: "10px" }}
                         class='btn btn-success'
-                        to={`/admin/staff-management/editmembers/${item._id}`}
+                        to={`/admin/staffmanagement/editmembers/${item._id}`}
                       >
                         <i class='fa fa-edit'></i>edit
                       </Link>
                       <Link
                         style={{ marginTop: "30px" }}
                         class='btn btn-danger'
-                        to={`/admin/staff-management/deletemembers/${item._id}`}
+                        to={`/admin/staffmanagement/deletemembers/${item._id}`}
                       >
                         <i class='fa fa-trash'></i> delete
                       </Link>
@@ -84,7 +84,7 @@ export default class Management extends Component {
                       <Link
                         style={{ marginTop: "30px" }}
                         class='btn btn'
-                        to={`/admin/staff-management/contactstaff/${item._id}`}
+                        to={`/admin/staffmanagement/contactstaff/${item._id}`}
                       >
                       <i class="fa fa-envelope" style={{fontSize:'28px',color:'red'}}></i>
                       </Link>

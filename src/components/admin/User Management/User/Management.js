@@ -51,7 +51,7 @@ export default class Management extends Component {
                     <Link
                     
                         class='btn btn-danger'
-                        to={`/admin/user-management/deletemembers/${item._id}`}
+                        to={`/admin/usermanagement/deletemembers/${item._id}`}
                       >
                         <i class='fa fa-trash'></i> delete
                       </Link>
@@ -60,7 +60,7 @@ export default class Management extends Component {
                     <Link
                         style={{ marginTop: "30px" }}
                         class='btn btn'
-                        to={`/admin/user-management/editmembers/${item._id}`}
+                        to={`/admin/usermanagement/editmembers/${item._id}`}
                       >
                       <i class="fa fa-envelope" style={{fontSize:'28px',color:'red'}}></i>
                       </Link>

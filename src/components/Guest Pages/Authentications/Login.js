@@ -19,7 +19,7 @@ export default function Login() {
       .post("http://localhost:8070/api/auth/login", data)
       .then((response) => {
         if (response.data.users.userType == "Admin") {
-          history.push("/management");
+          history.push("/admin/conferencemanagement");
 
         } else if (response.data.users.userType == "User") {
           history.push("/");
