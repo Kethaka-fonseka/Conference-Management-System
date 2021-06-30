@@ -26,21 +26,21 @@ export const SidebarData = [
     },
     {
         title: 'Conference',
-        path:'/admin/conference-management',
+        path:'/admin/conferencemanagement',
         icon: <AiIcons.AiFillHome/>,
         cName: 'nav-text'
     },
 
     {
         title: 'Template',
-        path:'/admin/template-management',
+        path:'/admin/templatemanagement',
         icon: <AiIcons.AiFillCodeSandboxSquare/>,
         cName: 'nav-text'    
     },
 
     {
         title: 'Requests',
-        path:'/admin/request-management',
+        path:'/admin/requestmanagement',
         icon: <FaIcons.FaCartPlus/>,
         cName: 'nav-text'    
     },
@@ -49,7 +49,7 @@ export const SidebarData = [
 
     {
         title: 'Support',
-        path:'/admin/support-management',
+        path:'/admin/supportmanagement',
         icon: <FaIcons.FaEnvelopeOpenText/>,
         cName: 'nav-text'    
     },

@@ -57,7 +57,7 @@ export default class Management extends Component {
                           width: "100px",
                           height: "100px",
                         }}
-                        src={`http://localhost:3000/data/UserManagement/${item.Identity}`}
+                        src={`http://localhost:3000/${item.Identity}`}
                       />
                     </td>
                     <td style={{ paddingTop: "40px" }}>
