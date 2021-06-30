@@ -25,6 +25,12 @@ import MainConManagement from "../components/admin/Conference Management/Main/Ma
 import AddUpConference from "../components/admin/Conference Management/Upcoming/AddUpConference";
 import ViewTemplates from "../components/admin/Template Managment/ViewTemplates";
 
+
+<Route exact path="/" component={Home}/>
+<Route  path="/add" component={AddSubmission}/>
+<Route  path="/pending" component={PendingSubmissions}/>
+<Route  path="/:id" component={ViewSubmission}/>
+
 function MainRoutes() {
   return (
     <Router>
@@ -88,6 +94,13 @@ function MainRoutes() {
           path="/admin/usermanagement/editmembers/:id"
           component={ContactUsers}
         />
+		
+		   <Route exact path="/" component={Home}/>
+    <Route  path="/add" component={AddSubmission}/>
+    <Route  path="/pending" component={PendingSubmissions}/>
+    <Route  path="/:id" component={ViewSubmission}/>
+		
+		
         {/*Sandaruwan end*/}
       </Switch>
     </Router>
