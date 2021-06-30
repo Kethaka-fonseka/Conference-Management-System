@@ -39,12 +39,15 @@ function MainRoutes() {
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        {/*Ushan start*/}
         <Route
           path="/admin/templatemanagement"
           component={TemplateManagement}
         />
+        {/*ushan end*/}
+
         <Route path="/admin/requestmanagement" component={RequestManagement} />
-        {/*Mandara*/}
+        {/*Mandara start*/}
         <Route
           path="/admin/conference-management"
           component={ConferenceManagement}
@@ -54,8 +57,9 @@ function MainRoutes() {
           component={MainConManagement}
         />
         <Route path="/admin/addconference" component={AddUpConference} />
+        {/*Mandara end*/}
 
-        {/*Sandaruwan*/}
+        {/*Sandaruwan start*/}
         <Route path="/admin/supportmanagement" component={SupportManagment} />
 
         <Route path="/admin/staff-management" component={StaffManagement} />
@@ -84,6 +88,7 @@ function MainRoutes() {
           path="/admin/usermanagement/editmembers/:id"
           component={ContactUsers}
         />
+        {/*Sandaruwan end*/}
       </Switch>
     </Router>
   );
