@@ -1,6 +1,4 @@
 import React from "react";
-import NavBar from "../components/Header/NavBar";
-import Vid from "../components/Header/Vid";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../components/Guest Pages/Home/Home";
 import About from "../components/Guest Pages/About";
@@ -8,7 +6,6 @@ import Contact from "../components/Guest Pages/Contact";
 import Login from "../components/Guest Pages/Authentications/Login";
 import Signup from "../components/Guest Pages/Authentications/Login";
 import Keynotes from "../components/Guest Pages/KeyNotes/keynotes";
-import AdminNav from "../components/admin/AdminNav";
 import RequestManagement from "../components/admin/Request Managment/RequestManagement";
 import AddTemplates from "../components/admin/Template Managment/AddTemplates";
 import ConferenceManagement from "../components/admin/Conference Management/Upcoming/ConferenceManagement";
@@ -49,13 +46,17 @@ function MainRoutes() {
         {/*Mandara start*/}
         <Route
           path="/admin/conference-management"
-          component={ConferenceManagement}
+          component={MainConManagement}
         />
         <Route
           path="/admin/upcoming-management"
-          component={MainConManagement}
+          component={ConferenceManagement}
         />
-        <Route path="/admin/addconference" component={AddUpConference} />
+        <Route path="/admin/addupconference" component={AddUpConference} />
+        <Route
+          path="/admin/updateupconference/:id"
+          component={AddUpConference}
+        />
         {/*Mandara end*/}
 
         {/*Sandaruwan start*/}
