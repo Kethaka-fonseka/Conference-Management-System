@@ -26,5 +26,8 @@ router.use("/contactusers", ContactUsers);
 const Payment = require("../routes/Payment/Payment");
 router.use("/bill", Payment);
 
+const TemplateRoute = require("../routes/Template/TemplateRoute");
+router.use("/template", TemplateRoute);
+
 
 module.exports = router;

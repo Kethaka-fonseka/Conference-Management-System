@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="972e5c41-57d9-47d1-b87e-4e98019185eb" name="Default Changelist" comment="Commit!" />
+    <list default="true" id="972e5c41-57d9-47d1-b87e-4e98019185eb" name="Default Changelist" comment="Commit!">
+      <change afterPath="$PROJECT_DIR$/models/TemplateModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/Template/TemplateRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/lib/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/lib/counter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/lib/file-appender.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/lib/file-appender.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/lib/make-middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/lib/make-middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/lib/multer-error.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/lib/multer-error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/lib/remove-uploaded-files.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/lib/remove-uploaded-files.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/storage/disk.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/storage/disk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/multer/storage/memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/multer/storage/memory.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -24,8 +48,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -39,6 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622323474413</updated>
       <workItem from="1622323475911" duration="480000" />
+      <workItem from="1625063926068" duration="6045000" />
     </task>
     <task id="LOCAL-00001" summary="Commit!">
       <created>1622323738402</created>
@@ -63,6 +91,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit!" />
