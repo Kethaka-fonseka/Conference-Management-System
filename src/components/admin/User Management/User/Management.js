@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../../../../stylesheets/UserManagement.css";
 
+
 export default class Management extends Component {
   constructor(props) {
     super(props);
@@ -50,7 +51,7 @@ export default class Management extends Component {
                     <Link
                     
                         class='btn btn-danger'
-                        to={`/admin/user-management/addmembers/${item._id}`}
+                        to={`/admin/user-management/deletemembers/${item._id}`}
                       >
                         <i class='fa fa-trash'></i> delete
                       </Link>

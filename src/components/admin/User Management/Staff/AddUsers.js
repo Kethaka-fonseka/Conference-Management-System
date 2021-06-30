@@ -4,6 +4,9 @@ import FormData from "form-data";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import swal from "sweetalert";
+import {Card, Container} from "react-bootstrap";
+import {Divider, Paper} from "@material-ui/core";
+
 
 export default function AddUsers() {
   const [FirstName, setFirstName] = useState("");
@@ -51,7 +54,13 @@ export default function AddUsers() {
       });
   }
   return (
-    <div class='body' align='center' style={{ marginTop: "10px" }}>
+      <Container >
+        <Paper elevation={"9"}>
+      <Card >
+        <h1 className={"text-center sub-titles mt-2"}>ADD USER</h1>
+        <Divider/>
+        <Card.Body>
+    <div  align='center' style={{ marginTop: "10px" }}>
       <div style={{ backgroundColor: "white", width: "1050px", height:'690px' }}>
         <form class='form1' onSubmit={sendData}>
             <br/><br/><br/>
@@ -77,8 +86,6 @@ export default function AddUsers() {
               type='text'
               placeholder='First Name'
               class='form-control'
-              aria-label='Sizing example input'
-              aria-describedby='inputGroup-sizing-default'
               onChange={(e) => {
                 setFirstName(e.target.value);
               }}
@@ -281,5 +288,9 @@ export default function AddUsers() {
         </form>
       </div>
     </div>
+        </Card.Body>
+      </Card>
+        </Paper>
+    </Container>
   );
 }

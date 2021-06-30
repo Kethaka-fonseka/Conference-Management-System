@@ -9,6 +9,8 @@ import { IconContext } from 'react-icons/lib';
 import {SidebarData} from "./sidebar";
 import '../../stylesheets/AdminNavBar.css';
 import NavBar from "../Header/NavBar";
+import SubNav from "./SubNav";
+
 
 function AdminNav() {
 
@@ -33,21 +35,21 @@ function AdminNav() {
                </Navbar>
 
                 <Nav className={sideBar ? 'nav-menu active' : 'nav-menu'}>
-
-
-
-                    <ul className='nav-menu-items' onClick={showSideBar}>
+                    <ul className={"nav-menu-item "}>
                         {SidebarData.map((item, index)=>{
                             return (
-                                <li key={index} className={item.cName}>
-                                    <Link to={item.path}>
-                                        {item.icon}
-                                        <span>{item.title}</span>
-                                    </Link>
-                                </li>
+
+                                    <SubNav item={item} key={index}/>
+
+
+
+
                             );
                         })}
                     </ul>
+
+
+
                 </Nav>
 
         </>

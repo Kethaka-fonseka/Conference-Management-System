@@ -27,7 +27,7 @@ export default class Management extends Component {
           <div class='card' style={{ backgroundColor: "white", width: "1250px", height: 'auto' }}>
           <form class='form1'>
             <Link
-              to='/addusers'
+              to='/admin/staffmanagement/addmembers'
               id='add__new__list'
               type='button'
               class='btn btn-success position-absolute'

@@ -32,7 +32,6 @@ function MainRoutes() {
     return (
         <Router>
             <AllNav/>
-            <Vid/>
             <br/>
             <Switch>
                 <Route path="/" exact component={Home}/>
@@ -47,16 +46,15 @@ function MainRoutes() {
                 <Route path='/admin/support-management' component={SupportManagment} />
 
 
-            
 
                 <Route path='/admin/staff-management' component={StaffManagement} />
-                <Route path='/admin/staff-management/addmembers' component={AddStaffMembers} />
+                <Route path='/admin/staffmanagement/addmembers' component={AddStaffMembers} />
                 <Route path='/admin/staff-management/editmembers/:id' component={EditStaffMembers} />
                 <Route path='/admin/staff-management/deletemembers/:id' component={DeleteStaffMembers} />
                 <Route path='/admin/staff-management/contactstaff/:id' component={ContactStaffMembers} />
 
                 <Route path='/admin/user-management' component={UserManagement} />
-                <Route path='/admin/user-management/addmembers/:id' component={DeleteUsers} />
+                <Route path='/admin/user-management/deletemembers/:id' component={DeleteUsers} />
                 <Route path='/admin/user-management/editmembers/:id' component={ContactUsers} />
 
 

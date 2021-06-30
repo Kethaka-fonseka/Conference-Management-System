@@ -48,6 +48,7 @@
   
   .nav-menu-items {
     width: 100%;
+    text-decoration: none;
   }
   
   .navbar-toggle {
