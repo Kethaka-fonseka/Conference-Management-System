@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import NavBar from "../components/Header/NavBar";
 import Vid from "../components/Header/Vid";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../components/Guest Pages/Home/Home";
 import About from "../components/Guest Pages/About";
 import Contact from "../components/Guest Pages/Contact";
@@ -11,7 +11,7 @@ import Keynotes from "../components/Guest Pages/KeyNotes/keynotes";
 import AdminNav from "../components/admin/AdminNav";
 import RequestManagement from "../components/admin/Request Managment/RequestManagement";
 import TemplateManagement from "../components/admin/Template Managment/TemplateManagement";
-import ConferenceManagement from "../components/admin/Conference Management/ConferenceManagement";
+import ConferenceManagement from "../components/admin/Conference Management/Upcoming/ConferenceManagement";
 import AllNav from "../components/admin/AllNav";
 import SupportManagment from "../components/admin/Support Management/SupportManagment";
 
@@ -24,43 +24,69 @@ import ContactStaffMembers from "../components/admin/User Management/Staff/Conta
 import UserManagement from "../components/admin/User Management/User/Management";
 import DeleteUsers from "../components/admin/User Management/User/DeleteUsers";
 import ContactUsers from "../components/admin/User Management/User/Contact";
-
-
+import MainConManagement from "../components/admin/Conference Management/Main/MainConManagement";
+import AddUpConference from "../components/admin/Conference Management/Upcoming/AddUpConference";
 
 function MainRoutes() {
+  return (
+    <Router>
+      <AllNav />
+      <br />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/keynotes" component={Keynotes} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
+        <Route
+          path="/admin/templatemanagement"
+          component={TemplateManagement}
+        />
+        <Route path="/admin/requestmanagement" component={RequestManagement} />
+        {/*Mandara*/}
+        <Route
+          path="/admin/conference-management"
+          component={ConferenceManagement}
+        />
+        <Route
+          path="/admin/upcoming-management"
+          component={MainConManagement}
+        />
+        <Route path="/admin/addconference" component={AddUpConference} />
 
-    return (
-        <Router>
-            <AllNav/>
-            <br/>
-            <Switch>
-                <Route path="/" exact component={Home}/>
-                <Route path="/keynotes" component={Keynotes}/>
-                <Route path="/about" component={About}/>
-                <Route path="/contact" component={Contact}/>
-                <Route path="/login" component={Login}/>
-                <Route path="/signup" component={Signup}/>
-                <Route path='/admin/templatemanagement' component={TemplateManagement} />
-                <Route path='/admin/requestmanagement' component={RequestManagement} />
-                <Route path='/admin/conferencemanagement' component={ConferenceManagement} />
-                <Route path='/admin/supportmanagement' component={SupportManagment} />
+        {/*Sandaruwan*/}
+        <Route path="/admin/supportmanagement" component={SupportManagment} />
 
-                <Route path='/admin/staff-management' component={StaffManagement} />
-                <Route path='/admin/staffmanagement/addmembers' component={AddStaffMembers} />
-                <Route path='/admin/staffmanagement/editmembers/:id' component={EditStaffMembers} />
-                <Route path='/admin/staffmanagement/deletemembers/:id' component={DeleteStaffMembers} />
-                <Route path='/admin/staffmanagement/contactstaff/:id' component={ContactStaffMembers} />
-
-                <Route path='/admin/user-management' component={UserManagement} />
-                <Route path='/admin/user-management/deletemembers/:id' component={DeleteUsers} />
-                <Route path='/admin/user-management/editmembers/:id' component={ContactUsers} />
-
-
-            </Switch>
-        </Router>
-
-        
-    );
+        <Route path="/admin/staff-management" component={StaffManagement} />
+        <Route
+          path="/admin/staffmanagement/addmembers"
+          component={AddStaffMembers}
+        />
+        <Route
+          path="/admin/staffmanagement/editmembers/:id"
+          component={EditStaffMembers}
+        />
+        <Route
+          path="/admin/staffmanagement/deletemembers/:id"
+          component={DeleteStaffMembers}
+        />
+        <Route
+          path="/admin/staffmanagement/contactstaff/:id"
+          component={ContactStaffMembers}
+        />
+        <Route path="/admin/user-management" component={UserManagement} />
+        <Route
+          path="/admin/usermanagement/deletemembers/:id"
+          component={DeleteUsers}
+        />
+        <Route
+          path="/admin/usermanagement/editmembers/:id"
+          component={ContactUsers}
+        />
+      </Switch>
+    </Router>
+  );
 }
 
 export default MainRoutes;
